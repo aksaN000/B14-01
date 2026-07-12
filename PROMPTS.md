@@ -25,3 +25,4 @@ so it fits the rest of the page while standing out from the card grids used else
 - Keep the terminal text aligned in monospace and color-code prompt / comments / strings / numbers.
 - Add three highlight stats (prize pool, duration, mentors) beside the terminal.
 - Make the layout a 2-column grid that collapses to a single column under 768px.
+- fix the padding. 
