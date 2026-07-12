@@ -474,9 +474,45 @@ nav ul li a:hover::after{
 /* footer section */
 
 .site-footer{
-    background: #0d1b2a;   
-    color: #94a3b8;       
-    padding: 32px 0;
+    background: #0d1b2a;
+    color: #94a3b8;
+    padding: 40px 0;
+}
+.footer-top{
+    display: flex;
+    justify-content: space-between;   /* logo left, socials right */
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+.footer-logo{
+    height: 30px;
+    width: auto;
+}
+.socials{
+    display: flex;
+    gap: 14px;
+}
+.socials a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.06);
+    color: #94a3b8;
+    transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+.socials a:hover{
+    background: #1d4ed8;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+.footer-divider{
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);   /* faint line on dark */
+    margin: 24px 0;
 }
 .footer-bar{
     display: flex;
