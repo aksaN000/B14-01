@@ -3,16 +3,28 @@
     padding: 0px;
 }
 body{
-    background-color: #f5f5f5;
+    background-color: #ffffff;
+    font-family: "Inter", sans-serif;
 }
+.container{
+    max-width: 1320px;     
+    margin: 0 auto;        
+    padding: 0 20px;       
+}
+
 
 /* navbar styles */
 .navbar{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #ffffff;
     padding: 10px 20px;
+    flex-wrap: wrap;
+    gap: 12px;
+
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
 nav ul{
@@ -47,17 +59,12 @@ nav ul li a:hover{
 nav ul li a:hover::after{
     width: 100%;
 }
-.logo{
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    
-}
+
 .logo img{
-    width: 32px;
-    height: 32px;
+    height: 32px;   
+    width: auto;  
 }
-.register-btn button{
+.register-btn{
     padding: 12px 12px;
     width: 192px;
     height: auto;
@@ -68,26 +75,209 @@ nav ul li a:hover::after{
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
 }
-.register-btn button:hover{
+.register-btn:hover{
     background-color: #163a9e;
     transform: translateY(-2px);
     box-shadow: 0 6px 16px rgba(29, 78, 216, 0.4);
 }
-.register-btn button:active{
+.register-btn:active{
     transform: translateY(0);
     box-shadow: 0 3px 8px rgba(29, 78, 216, 0.3);
 }
 
 /* hero banner styles */
 .banner{
-    background-image: url('./assets/banner.jpg');
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6000000238418579) 30.000001192092896%,rgba(0, 0, 0, 0) 69.9999988079071%) , url('/assignment01/assets/banner.jpg');
     background-size: cover;
+    min-height: 90vh;
     background-position: center;
-    height: 100vh;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     color: #ffffff;
+    gap: 24px;
 }
+.banner h1{
+    font-size: 80px;
+    font-weight: bold;
+}
+.banner p{
+    font-size: 22px;
+
+    letter-spacing: 0px;
+     max-width: 700px;
+}
+.banner .register-btn{
+     margin-top: 50px;
+     width: 250px;
+     height: 60px;
+}
+
+
+/* meet the speaker section */
+.speakers{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    margin-top: 30px;
+    
+}
+.card-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    
+}
+.card-container .card{
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding-bottom: 16px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card-container .card:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.card-container .card img{
+    width: 100%;
+    height: auto;
+}
+.card-container .card h3{
+    font-size: 20px;
+    margin: 12px 12px;
+}
+.card-container .card p{
+    font-size: 16px;
+    margin: 12px 12px;
+    color: #575757;
+}
+.card-container .card .track{
+    color: #1d4ed8;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+/* Secure your spot section */
+
+.pricing-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+.secure-your-spot{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 60px;
+}
+.secure-your-spot h1{
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.secure-your-spot > p{          /* access immediate child paragraph */
+    font-size: 12px;
+    color: #575757;
+    margin-bottom: 24px;
+}
+
+.price-card{
+    /* colors as variables: the featured card overrides these in ONE place */
+    --label-color: #6b7280;
+    --price-color: #0d1b2a;
+    --body-color: #374151;
+    --divider-color: #e5e7eb;
+
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.price-card:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.price-card.featured-card{
+    --label-color: #93c5fd;
+    --price-color: #ffffff;
+    --body-color: #e5e7eb;
+    --divider-color: rgba(255, 255, 255, 0.2);
+    background: #0d1b2a;
+    transform: scale(1.05); 
+}
+.subscribe-btn{
+    margin-top: auto;       
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #1d4ed8;
+    background: #ffffff;
+    color: #1d4ed8;
+    cursor: pointer;
+}
+.featured-card .subscribe-btn{
+    background: #1d4ed8;
+    color: #ffffff;
+    border: none;
+}
+
+/* plan label / price / per-person */
+.price-card .plan{
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--label-color);
+    margin: 0;
+}
+.price-card .price{
+    font-size: 40px;
+    font-weight: 800;
+    color: var(--price-color);
+    margin: 8px 0 0;
+}
+.price-card .per{
+    font-size: 13px;
+    color: var(--label-color);
+    margin: 4px 0 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--divider-color);   /* divider under the price block */
+}
+
+/* feature list with blue dots */
+.price-card ul{
+    list-style: none;
+    padding: 0;
+    margin: 0 0 24px;
+    text-align: left;
+    flex-grow: 1;               /* fills space so buttons align at the bottom */
+}
+.price-card li{
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 12px;
+    font-size: 14px;
+    color: var(--body-color);
+}
+.price-card li::before{
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #1d4ed8;
+    font-weight: bold;
+}
+
+/* No per-element featured overrides needed — the variables above handle it. */
+
