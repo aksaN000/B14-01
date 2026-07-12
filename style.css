@@ -280,7 +280,7 @@ nav ul li a:hover::after{
 }
 
 
-/* ===== DevConf Hackathon (AI challenge section) ===== */
+/*DevConf Hackathon (AI challenge section)*/
 .hackathon{
     display: flex;
     flex-direction: column;
@@ -288,6 +288,17 @@ nav ul li a:hover::after{
     text-align: center;
     padding: 80px 20px;
     gap: 12px;
+}
+.hack-badge{
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 999px;
+    background: rgba(29, 78, 216, 0.1);
+    color: #1d4ed8;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 .hack-title{
     font-size: 32px;
@@ -311,9 +322,10 @@ nav ul li a:hover::after{
 /* terminal panel */
 .terminal{
     background: #0d1b2a;
+    border: 1px solid rgba(147, 197, 253, 0.15);
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 12px 30px rgba(13, 27, 42, 0.35);
+    box-shadow: 0 20px 50px rgba(29, 78, 216, 0.25);   /* blue glow */
     text-align: left;
 }
 .terminal-bar{
@@ -364,12 +376,29 @@ nav ul li a:hover::after{
     gap: 16px;
 }
 .hack-stat{
+    display: flex;
+    align-items: center;
+    gap: 14px;
     background: #ffffff;
     border: 1px solid #e5e7eb;
     border-radius: 12px;
     padding: 18px 20px;
     text-align: left;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+.hack-stat:hover{
+    transform: translateY(-3px);
+    border-color: #1d4ed8;
+    box-shadow: 0 8px 18px rgba(29, 78, 216, 0.15);
+}
+.hack-icon{
+    font-size: 26px;
+    line-height: 1;
+}
+.hack-stat-text{
+    display: flex;
+    flex-direction: column;
 }
 .hack-num{
     display: block;
@@ -394,5 +423,29 @@ nav ul li a:hover::after{
     }
 }
 
+/* footer section */
 
-
+.site-footer{
+    background: #0d1b2a;   /* dark navy, like the Figma */
+    color: #94a3b8;        /* muted gray text */
+    padding: 32px 0;
+}
+.footer-bar{
+    display: flex;
+    justify-content: space-between;   /* copyright left, links right */
+    align-items: center;
+    flex-wrap: wrap;                  /* stacks on small screens */
+    gap: 12px;
+}
+.footer-links{
+    display: flex;
+    gap: 24px;
+}
+.footer-links a{
+    color: #94a3b8;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.footer-links a:hover{
+    color: #ffffff;   /* or your blue #1d4ed8 */
+}
