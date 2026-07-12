@@ -1,6 +1,6 @@
 # AI Prompts
 ## Section idea
-A **"DevConf Hackathon 2026"** section presented as a **code terminal** — a developer-themed,
+A **"DevConf Hackathon 2026"** section presented as a **code terminal**, a developer-themed,
 visually distinct block that reuses the site's existing colors (navy blue)
 so it fits the rest of the page while standing out from the card grids used elsewhere.
 
